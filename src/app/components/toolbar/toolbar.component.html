@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Organic shop</span>
+    <div class="email">{{email}}</div>
+    <div class="example-button-row">
+      <button mat-raised-button color="warn" (click)="logout()" *ngIf="user_email" routerLink = ''>Log Out</button>
+      <button mat-raised-button color="primary" routerLink = '/goods' style="margin-left: 20px;">Products</button>
+      <button mat-raised-button color="accent" matBadge={{count}} matBadgePosition="before" matBadgeColor="warn" style="margin-left: 20px;" routerLink = '/basket'>Basket</button>
+    </div>
+  </mat-toolbar-row>

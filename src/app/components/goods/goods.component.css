@@ -1,0 +1,19 @@
+.example-card {
+  max-width: 300px;
+  margin: 23px;
+  float: left;
+}
+
+.example-header-image {
+  background-image: url('https://b1.vestifinance.ru/c/372331.742xp.jpg');
+  background-size: cover;
+}
+.hover:hover{
+    color: white;
+    background-color: rebeccapurple;
+}
+.hover{
+    color: rebeccapurple;
+    background: #f0f0f0;
+    border: 1px dotted #b8b8b8;
+}

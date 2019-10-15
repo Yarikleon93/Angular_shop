@@ -1,0 +1,31 @@
+<app-toolbar></app-toolbar>
+<form [formGroup]="profileForm" (submit)="onsubmit()">
+<div class="example-container">
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" formControlName="email" required>
+    <mat-error *ngIf="profileForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" formControlName="password" [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <mat-error *ngIf="profileForm.get('email').invalid">{{getErrorMessagePass()}}</mat-error>
+  </mat-form-field>
+</div>
+
+
+<div class="button">
+  <div class="example-button-row">
+    <a mat-stroked-button routerLink='/changepass'>Change Password
+</a>
+  </div>
+
+    <div class="example-button-row" style="float: right;">
+    <button mat-raised-button color="primary" type="submit">Sign in</button>
+  </div>
+</div>
+
+</form>
